@@ -1,1 +1,6 @@
-
+FROM python                                 (oka container create ayyi python andulo install avutundi)
+WORKDIR /mypython                            (container lo /mypython ane folder create ayyi mana code &  related files andulo untai)
+COPY requirements.txt .                       (reuirements ni container lo current path ante /mypython lo ki copy avutundi)
+RUN pip install -r req.txt                     (indulo dependensies install chestham/ image lopala command execute avvalante RUN vadali)
+COPY . .                                       ( first . naa proejct lo unna except re.txt adhi munde ichesam ante adi kaka remaining anni files container lo copy cheyali adi second dot)
+CMD ["python","app.py"]                        (app ni start cheyali ante/ container start ayyinapaudu)
